@@ -2,7 +2,7 @@
 layout: project_page
 permalink: /
 
-title:  Safety Fine-Tuning at (Almost) No Cost A Baseline for Vision Large Language Models
+title:  "Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models"
 authors:
   - Yongshuo Zong, 
   - Ondrej Bohdal, 
