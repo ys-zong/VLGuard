@@ -2,11 +2,16 @@
 layout: project_page
 permalink: /
 
-title: Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models
+title:  Safety Fine-Tuning at (Almost) No Cost A Baseline for Vision Large Language Models
 authors:
-    Yongshuo Zong, Ondrej Bohdal, Tingyang Yu, Yongxin Yang, Timothy Hospedales
+  - Yongshuo Zong
+  - Ondrej Bohdal
+  - Tingyang Yu
+  - Yongxin Yang
+  - Timothy Hospedales
 affiliations:
-    1. University of Edinburgh 2. EPFL
+  - University of Edinburgh
+  - EPFL
 paper: https://arxiv.org/abs/2402.02207
 code: https://github.com/ys-zong/VLGuard
 data: https://github.com/ys-zong/VLGuard/data
@@ -24,8 +29,8 @@ Current vision large language models (VLLMs) exhibit remarkable capabilities yet
 ---
 
 <p align="middle">
-  <img src="static/image/teaser.PNG" width="150" />
-  <img src="static/image/tradeoff.PNG" width="310" /> 
+  <img src="static/image/teaser.PNG" width="300" />
+  <img src="static/image/tradeoff.PNG" width="610" /> 
 </p>
 
 
@@ -47,8 +52,8 @@ We adhere to OpenAI’s usage policies and Meta’s responsible use guide2 to id
 We argue that the additional complexity manifests in two distinct scenarios: (1) the presence of harmful information in the image, irrespective of the text being safe or unsafe, and (2) a safe image coupled with text that provides harmful instructions related to the visual content. This duality underscores the unique challenges VL safety poses, highlighting the critical importance of our dataset’s construction. Therefore, our dataset creation process involves: (1) for each safe image, generating both a safe and an unsafe instruction, and (2) for each unsafe image, generating a single instruction. We use GPT-4V to automate the above-mentioned process.
 
 <p align="middle">
-  <img src="static/image/dataset.PNG" width="260" />
-  <img src="static/image/dataset_alg.PNG" width="176" /> 
+  <img src="static/image/dataset.PNG" width="480" />
+  <img src="static/image/dataset_alg.PNG" width="323" /> 
 </p>
 
 Figure: **Left**, Number of unsafe examples in each subcategory, across the training and test splits.. **Right**, Pipeline to prompt GPT4V to create the dataset.
