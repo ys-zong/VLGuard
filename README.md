@@ -1,10 +1,10 @@
 # VLGuard
-[[Website]](https://github.com/ys-zong/VLGuard) [[Paper]](https://arxiv.org/abs/2402.02207)
+[[Website]](https://ys-zong.github.io/VLGuard/) [[Paper]](https://arxiv.org/abs/2402.02207)
 
 Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models.
 
 ## Dataset
-You can find the dataset in `data/`. `train.json` and `test.json` are the meta data of VLGuard and the images are in `train.zip` and `test.zip`.
+You can find the dataset in `data/`. `train.json` and `test.json` are the meta data of VLGuard and the images are in `train.zip` and `test.zip`. We also host a copy at HuggingFace [here](https://huggingface.co/datasets/ys-zong/VLGuard).
 
 ## Usage
 
