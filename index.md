@@ -7,7 +7,7 @@ authors:
     Yongshuo Zong, Ondrej Bohdal, Tingyang Yu, Yongxin Yang, Timothy Hospedales
 affiliations:
     1. University of Edinburgh 2. EPFL
-paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf
+paper: https://arxiv.org/abs/2402.02207
 code: https://github.com/ys-zong/VLGuard
 data: https://github.com/ys-zong/VLGuard/data
 ---
@@ -69,5 +69,10 @@ The fine-tuned model learns to reject unsafe, misleading advertisment related to
 
 ## Citation
 ```
-
+@article{zong2023safety,
+  title={Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models},
+  author={Zong, Yongshuo and Bohdal, Ondrej and Yu, Tingyang and Yang, Yongxin and Hospedales Timothy},
+  journal={arXiv preprint arXiv:2402.02207},
+  year={2024}
+}
 ```
