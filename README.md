@@ -1,5 +1,5 @@
 # VLGuard
-[[Website]](https://ys-zong.github.io/) [[Paper]](https://arxiv.org/abs/2402.02207)
+[[Website]](https://github.com/ys-zong/VLGuard) [[Paper]](https://arxiv.org/abs/2402.02207)
 
 Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models.
 
