@@ -14,7 +14,7 @@ affiliations:
   - "EPFL"
 paper: https://arxiv.org/abs/2402.02207
 code: https://github.com/ys-zong/VLGuard
-data: https://github.com/ys-zong/VLGuard/data
+data: https://huggingface.co/datasets/ys-zong/VLGuard
 ---
 
 <div class="columns is-centered has-text-centered">
