@@ -4,14 +4,14 @@ permalink: /
 
 title:  "Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models"
 authors:
-  - Yongshuo Zong, 
-  - Ondrej Bohdal, 
-  - Tingyang Yu, 
-  - Yongxin Yang, 
-  - Timothy Hospedales
+  - "Yongshuo Zong, "
+  - "Ondrej Bohdal, "
+  - "Tingyang Yu, "
+  - "Yongxin Yang, "
+  - "Timothy Hospedales"
 affiliations:
-  - University of Edinburgh, 
-  - EPFL
+  - "University of Edinburgh, "
+  - "EPFL"
 paper: https://arxiv.org/abs/2402.02207
 code: https://github.com/ys-zong/VLGuard
 data: https://github.com/ys-zong/VLGuard/data
