@@ -1,9 +1,8 @@
 import torch
 from llava.model.builder import load_pretrained_model as load_llava_model
-from llava.conversation import conv_templates, SeparatorStyle
+from llava.conversation import conv_templates
 from llava.constants import IMAGE_TOKEN_INDEX, DEFAULT_IMAGE_TOKEN, DEFAULT_IM_START_TOKEN, DEFAULT_IM_END_TOKEN
-from llava.mm_utils import tokenizer_image_token, KeywordsStoppingCriteria, get_model_name_from_path
-import argparse
+from llava.mm_utils import tokenizer_image_token
 
 
 def model_inference(engine, model, tokenizer, image, prompt, processor, max_new_tokens):
@@ -37,9 +36,4 @@ def load_model(model_path, args=None):
     tokenizer, model, image_processor, context_len = load_llava_model(model_path=model_path, model_base=None, model_name='llava', 
                                                                       attn_implementation='flash_attention_2', torch_dtype='float16', device_map='cuda',)
     processor = image_processor
-    
-    # model_path = args.custom_path
-    # tokenizer, model, image_processor, context_len = load_llava_model(model_path=model_path, model_base=None, model_name=get_model_name_from_path(model_path), load_8bit=load_8bit)
-    # processor = image_processor
-    
     return model, tokenizer, processor

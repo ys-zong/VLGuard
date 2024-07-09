@@ -1,29 +1,7 @@
-from PIL import Image, ImageDraw
-import torch
-from itertools import islice, cycle
+from PIL import Image
 import os
-from scipy.stats import pearsonr
-import pandas as pd
-import random
-import io
 import json
-import string
-import ast
 
-
-def chunk_dict(data, n_way):
-    """Yield successive n-sized chunks from data."""
-    # Create a cycling iterator for the keys
-    it = cycle(data)
-    # To avoid infinite cycles, we determine the stop condition
-    total_elements = len(data)
-    elements_yielded = 0
-
-    while elements_yielded < total_elements:
-        # Generate the subdictionary
-        chunk = {k: data[k] for k in islice(it, n_way) if elements_yielded < total_elements}
-        yield chunk
-        elements_yielded += len(chunk)
 
 def load_image(img_id, root_path):
     image_path = os.path.join(root_path, img_id)
@@ -68,25 +46,3 @@ def check_success_attack(pred):
         return False
     else:
         return True
-    
-
-def update_json_file(file_path, new_data):
-    # Check if the file exists
-    if os.path.exists(file_path):
-        # Read existing data
-        with open(file_path, 'r') as file:
-            try:
-                data = json.load(file)
-            except json.JSONDecodeError:
-                # File is empty, start with an empty dictionary
-                data = {}
-    else:
-        # File does not exist, start with an empty dictionary
-        data = {}
-
-    # Update data with new_data
-    data.update(new_data)
-
-    # Write updated data back to the file
-    with open(file_path, 'w') as file:
-        json.dump(data, file, indent=4)
