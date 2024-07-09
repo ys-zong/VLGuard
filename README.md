@@ -4,7 +4,7 @@
 Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Models.
 
 ## Updates
-
+- [2024/07/09] We released the evaluation code for VLGuard test set.
 - [2024/06/19] We released the fine-tuned model weights that we used for experiments.
 - [2024/05/01] VLGuard is accepted to ICML 2024!
 - [2024/02/06] We released [arXiv](https://arxiv.org/abs/2402.02207) and [data](https://huggingface.co/datasets/ys-zong/VLGuard) for VLGuard. With our safety fine-tuning, the we substantially improve the safety of vision large language models while maintaining the helpfulness.
