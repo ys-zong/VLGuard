@@ -12,6 +12,24 @@ Safety Fine-Tuning at (Almost) No Cost: A Baseline for Vision Large Language Mod
 ## Dataset
 You can find the dataset at [Huggingface](https://huggingface.co/datasets/ys-zong/VLGuard). `train.json` and `test.json` are the meta data of VLGuard and the images are in `train.zip` and `test.zip`. 
 
+## Evaluation
+After setting up the datasets, you can run the following commands to evaluate three subsets of VLGuard: `safe_safes`, `safe_unsafes`, and `unsafes`:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python VLGuard_eval.py --dataset unsafes --engine llava15-7b --metaDir /path/to/test.json --imageDir /path/to/VLGuard/test
+CUDA_VISIBLE_DEVICES=0 python VLGuard_eval.py --dataset safe_unsafes --engine llava15-7b --metaDir /path/to/test.json --imageDir /path/to/VLGuard/test
+CUDA_VISIBLE_DEVICES=0 python VLGuard_eval.py --dataset safe_safes --engine llava15-7b --metaDir /path/to/test.json --imageDir /path/to/VLGuard/test
+```
+
+The scripts will print out the ASR for `safe_unsafes`, and `unsafes` with string match (keywords [here]()). The generated predictions will be saved to `results` folder. 
+
+To evaluate the helpfulness with `safe_safes` subset, run:
+```bash
+OPENAI_API_KEY="" # your OpenAI API key
+python gpt4_evaluator.py --file_path results/safe_safes/{the_model_to_evaluate}.json --image_path /path/to/VLGuard/test --reference_path ./data/gpt4_safe_safes.json --output_path /path/to/save/results
+```
+It will calculate the win rate against GPT-4V.
+
 ## Model Weights
 We release the weights below. You can use them in exactly the same way as the original [LLaVA](https://github.com/haotian-liu/LLaVA/tree/main).
 
