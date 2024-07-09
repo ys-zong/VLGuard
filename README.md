@@ -21,7 +21,7 @@ CUDA_VISIBLE_DEVICES=0 python VLGuard_eval.py --dataset safe_unsafes --engine ll
 CUDA_VISIBLE_DEVICES=0 python VLGuard_eval.py --dataset safe_safes --engine llava15-7b --metaDir /path/to/test.json --imageDir /path/to/VLGuard/test
 ```
 
-The scripts will print out the ASR for `safe_unsafes`, and `unsafes` with string match (keywords [here]()). The generated predictions will be saved to `results` folder. 
+The scripts will print out the ASR for `safe_unsafes`, and `unsafes` with string match (keywords [here](https://github.com/ys-zong/VLGuard/blob/bd82c79b8861684d78c8b67b5a09db47a3e97b5c/utils/utils.py#L32)). The generated predictions will be saved to `results` folder. 
 
 To evaluate the helpfulness with `safe_safes` subset, run:
 ```bash

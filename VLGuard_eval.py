@@ -1,5 +1,4 @@
 import torch
-from tqdm import tqdm
 import os
 import json
 import argparse
@@ -47,7 +46,7 @@ def eval_questions(args, questions, model, tokenizer, processor, root_path, engi
 
             succ = utils.check_success_attack(predicted_answers)
             total_succ.append(succ)
-            
+
     if args.dataset != 'safe_safes':
         succ_rate = round(np.mean(total_succ) * 100, 2)
         print(f'{args.dataset} ASR of {engine}: ', f"{succ_rate}", flush=True)
