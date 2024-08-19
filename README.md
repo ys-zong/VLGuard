@@ -42,6 +42,15 @@ We release the weights below. You can use them in exactly the same way as the or
 | LLaVA-v1.5-13B-Mixed | LLaVA-v1.5-13B | Full FT | [ys-zong/llava-v1.5-13b-Mixed](https://huggingface.co/ys-zong/llava-v1.5-13b-Mixed) |   
 | LLaVA-v1.5-13B-Mixed-LoRA | LLaVA-v1.5-13B | LoRA | [ys-zong/llava-v1.5-13b-Mixed-lora](https://huggingface.co/ys-zong/llava-v1.5-13b-Mixed-lora) |   
 
+**Weights from Post-hoc Fine-tuning**
+
+| Model | Original VLLM | Fine-tuning | 🤗 Checkpoint |   
+|----------|----------|-----------|-----------|
+| LLaVA-v1.5-7B-Posthoc | LLaVA-v1.5-7B | Full FT | [ys-zong/llava-v1.5-7b-Posthoc](https://huggingface.co/ys-zong/llava-v1.5-7b-Posthoc) |  
+| LLaVA-v1.5-7B-Posthoc-LoRA | LLaVA-v1.5-7B | LoRA | [ys-zong/llava-v1.5-7b-Posthoc-lora](https://huggingface.co/ys-zong/llava-v1.5-7b-Posthoc-lora) |   
+| LLaVA-v1.5-13B-Posthoc | LLaVA-v1.5-13B | Full FT | [ys-zong/llava-v1.5-13b-Posthoc](https://huggingface.co/ys-zong/llava-v1.5-13b-Posthoc) |   
+| LLaVA-v1.5-13B-Posthoc-LoRA | LLaVA-v1.5-13B | LoRA | [ys-zong/llava-v1.5-13b-Posthoc-lora](https://huggingface.co/ys-zong/llava-v1.5-13b-Posthoc-lora) |   
+
 ----
 We have also released the weights of "Clean" LLaVA-v1.5 that we re-trained after removing the harmful samples from the training data (Table 1).
 
